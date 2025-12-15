@@ -129,7 +129,7 @@ jobs:
       - name: "libxml2: restore cache"
         if: ${{ matrix.libxml_minor }}
         id: libxml_cache_restore
-        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache/restore@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
           path: "libxml2-${{ steps.libxml_patch_version.outputs.PATCH }}"
           key: "${{ matrix.os }}-libxml-${{ matrix.libxml_minor }}-${{ steps.libxml_patch_version.outputs.PATCH }}"
@@ -157,7 +157,7 @@ jobs:
       - name: "libxml2: save cache"
         if: ${{ matrix.libxml_minor && steps.libxml_cache_restore.outputs.cache-hit != 'true' }}
         id: libxml_cache_save
-        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache/save@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
           path: "libxml2-${{ steps.libxml_patch_version.outputs.PATCH }}"
           key: ${{ steps.libxml_cache_restore.outputs.cache-primary-key }}
@@ -255,7 +255,7 @@ jobs:
 
       - name: Download the PHPCS phar
         if: ${{ matrix.custom_ini == false }}
-        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           name: phpcs-phar
 

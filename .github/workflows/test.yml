@@ -398,7 +398,7 @@ jobs:
         with:
           format: clover
           file: build/logs/clover-cbf.xml
-          flag-name: cbf-os-${{ matrix.os }}-ubuntu-latest-php-${{ matrix.php }}-custom-ini-${{ matrix.custom_ini }}
+          flag-name: cbf-os-${{ matrix.os }}-php-${{ matrix.php }}-custom-ini-${{ matrix.custom_ini }}
           parallel: true
 
   coveralls-finish:

@@ -152,6 +152,11 @@ final class TokenNameTest extends TestCase
                 'tokenCode' => T_PRIVATE_SET,
                 'expected'  => 'T_PRIVATE_SET',
             ],
+
+            'PHP 8.5 native token, polyfilled: T_VOID_CAST'                               => [
+                'tokenCode' => T_VOID_CAST,
+                'expected'  => 'T_VOID_CAST',
+            ],
         ];
     }
 }

@@ -57,4 +57,4 @@ jobs:
 
       - name: "Run bashunit tests"
         shell: bash
-        run: "./lib/bashunit -p tests/EndToEnd"
+        run: "./lib/bashunit -p tests/EndToEndBash"
